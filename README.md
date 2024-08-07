@@ -2,6 +2,8 @@
 
 This project is a modern login page with a clean and responsive design. It provides a seamless experience for users to either sign in or create a new account. The design incorporates a toggle effect for switching between sign-in and sign-up forms, social media integration, and a smooth gradient background.
 
+![Demo Video](Media/Demo.mp4)
+
 ## Table of Contents
 - [Features](#Features)
 - [Project Structure](#project-structure)
