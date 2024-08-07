@@ -10,22 +10,7 @@
 </head>
 <body>
     <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form>
-                <h1>Create Account</h1>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm Password">
-                <div class="terms">
-                    <input type="checkbox" id="terms" required>
-                    <label for="terms">I accept the Terms of Use & Privacy Policy. </label>
-                </div>
-                <button>Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in">
-            <form>
+        <form class="sign-in">
                 <h1>Sign In</h1>
                 <div class="social-icons">
                     <a href="" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -33,36 +18,47 @@
                     <a href="" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="" class="icon"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <span> Or Sign In Using Your <a href="">Email</a></span>
+                <span>Or Sign In Using Your Email</span>
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
-                <a href="">Forget Your Password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
+                <a href="" class="forget-password">Forgot Your Password?</a>
+                <button> Sign In </button>
+        </form>
+        <form class="sign-up">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confrim Password">
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I accept the Terms of Use & Privacy Policy. </label>
+                </div>
+                <button> Sign Up </button>
+        </form>
         <div class="toggle-container">
             <div class="toggle">
-                <div class="toggle-panel toggle-right">
+                <div class="toggle-right">
                     <h1>Hello, Friend!</h1>
-                    <p>Register with your personal details to use all of the site features</p>
-                    <button class="hidden" id="register">Sign Up</button>
+                    <p>Want to be a user? Sign up with your details to unlock all the features and start using the site.</p>
+                    <button class="hidden" id="register">sign up</button>
                 </div>
-                <div class="toggle-panel toggle-left">
+                <div class="toggle-left">
                     <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of the site features</p>
-                    <button class="hidden" id="login">Sign In</button>
+                    <p>Already a user? Sign in to access all the features and continue where you left off</p>
+                    <button class="hidden" id="login">log in</button>
                 </div>
             </div>
+        </div>
         </div>
     </div>
     <script>
         const container = document.getElementById("container");
-        const registerButton = document.getElementById("register");
+        const signUpButton = document.getElementById("register");
         const loginButton = document.getElementById("login");
-        registerButton.addEventListener("click", () => {
+        signUpButton.addEventListener("click", () => {
             container.classList.add("active");
         });
-
         loginButton.addEventListener("click", () => {
             container.classList.remove("active");
         });

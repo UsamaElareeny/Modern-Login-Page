@@ -9,200 +9,193 @@ html{
 }
 body{
     font-family: "Montserrat", sans-serif;
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    display: flex;
+    background-color: #c3cbdc;
+    background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+    display: flex;    
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 .container{
-    background-color: white;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: #fff;
     position: relative;
     overflow: hidden;
     width: 768px;
     max-width: 100%;
     min-height: 480px;
-}
-.container p{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    margin: 20px 0px;
-}
-.container span{
-    font-size: 12px;
-}
-.container a{
-    color: #333;
-    font-size: 13px;
-    text-decoration: none;
-    margin: 15px 0px 10px;
-}
-.container button{
-    background-color: #512da8;
-    color: white;
-    font-size: 12px;
-    padding: 10px 45px;
-    border-radius: 8px;
-    text-transform: uppercase;
-    border: 1px solid transparent;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-.container button.hidden{
-    background-color: transparent;
-    border-color: white;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .container form{
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    padding: 0px 20px;
+    transition: all 0.6s ease-in-out;
+    transform: translateX(0);
+}
+.container.active form{
+    transform: translateX(100%);
+}
+.container h1{
+    letter-spacing: 0.3px;
+}
+.container .social-icons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.container .social-icons i{
+    margin-right: 10px;
+    border: 1px solid #EEE;
+    height: 40px;
+    width: 45px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 0 40px;
-    height: 100%;
+    transition: all 0.4s ease-in-out;
 }
-.container input{
-    background-color: #eee;
-    border: none;
-    margin: 8px 0px;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 8px;
+form .social-icons i:hover{
+    background-color: #c3cbdc;
+}
+form span{
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+form input{
     width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #EEE;
+    margin-bottom: 20px;
+    border-radius: 10px;
     outline: none;
 }
-.form-container{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
+.sign-up h1{
+    margin-bottom: 30px;
 }
-.sign-in{
-    left: 0;
-    width: 50%;
-    z-index: 2;
-}
-.container.active .sign-in{
-    transform: translateX(100%);
-}
-.sign-up{
-    left: 0;
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
-}
-.container.active .sign-up{
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 3;
-    animation: move 0.6s;
-}
-.container .terms {
-    width: 100%;
+.terms {
     display: flex;
-    align-items: center;
-    margin: 10px 0;
+    margin-bottom: 10px;
     font-size: 12px;
+    width: 100%;
 }
-
-.container .terms input[type="checkbox"] {
+.terms input[type="checkbox"] {
     margin-right: 10px;
-    margin-left: 0;
     width: 15px;
     height: 15px;
     cursor: pointer;
+    vertical-align: middle;
 }
-.container .terms label {
+.terms label {
     cursor: pointer;
+    line-height: 15px;
 }
-
-/* @keyframes move {
-    0%, 49.99%{
-        opacity: 0;
-        z-index: 1;
-    }    
-    50%, 100%{
-        opacity: 1;
-        z-index: 5;
-    }
-} */
-.social-icons{
-    margin: 20px 0;
+form a{
+    text-decoration: none;
 }
-.social-icons a{
-    border: 1px solid #ccc;
-    border-radius: 20%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 4px;
-    width: 40px;
-    height: 40px;
-    font-size: 15px;
-    transition: all 0.2s linear;
+form .forget-password{
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: -14px;
+    margin-bottom: 30px;
+    align-self: flex-end;
+    transition: all 0.4s ease-in-out;
 }
-.social-icons a:hover{
-    background-color: #EEE;
+form .forget-password:hover{
+    color: #c3cbdc;
+}
+button{
+    padding: 13px 25px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: linear-gradient(to right, #434343 0%, black 100%);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+button:hover{
+    opacity: 0.8;
+}
+.sign-in{
+    z-index: 2;    
+}
+.container.active .sign-in{
+    z-index: 0;
+    opacity: 0;
+}
+.sign-up{
+    z-index: 0;
+    opacity: 0;
+}
+.container.active .sign-up{
+    z-index: 3;
+    opacity: 1;
 }
 .toggle-container{
     position: absolute;
+    height: 100%;
+    width: 50%;
     top: 0;
     right: 0;
-    width: 50%;
-    height: 100%;
     overflow: hidden;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #434343 0%, black 100%);
+    border-radius: 120px 0 0 80px;
+    color: white;
     transition: all 0.6s ease-in-out;
-    border-radius: 150px 0 0 100px;
+    transform: translateX(0);
     z-index: 1000;
 }
 .container.active .toggle-container{
     transform: translateX(-100%);
-    border-radius: 0 150px 100px 0;
+    border-radius: 0 120px 80px 0;
 }
-.toggle{
-    background-color: #512da8;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
-    position: relative;
-    width: 200%;
-    height: 100%;
-    left: -100%;
-    color: white;
-    transform: translateX(0);
-    transition: all 0.6s ease-in-out;
-}
-.container.active .toggle{
-    transform: translateX(50%);
-}
-.toggle-panel{
-    position: absolute;
-    width: 50%;
-    height: 100%;
+.toggle-container div{
     display: flex;
-    justify-content: center;
-    align-content: center;
     flex-direction: column;
-    padding: 0 30px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    top: 0;
-    transform: translateX(0);
     transition: all 0.6s ease-in-out;
 }
-.toggle-left{
+.toggle-container .toggle-left{
+    display: none;
     transform: translateX(-200%);
 }
 .container.active .toggle-left{
+    display: block;
     transform: translateX(0%);
 }
-.toggle-right{
-    right: 0;
-    transform: translateX(0);
+.toggle-container .toggle-right{
+    transform: translateX(0%);
 }
 .container.active .toggle-right{
+    display: none;
     transform: translateX(200%);
+}
+
+.toggle-container button{
+    background: linear-gradient(to right, #ffffff, #e6e6e6, #f0f0f0);
+    color: black;
 }
